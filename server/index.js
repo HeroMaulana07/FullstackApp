@@ -11,8 +11,8 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://fullstackapp-production-e331.up.railway.app/",
-  "https://*.up.railway.app", // ← ganti nanti pas frontend deploy
+  "https://fullstackapp-production-e331.up.railway.app",
+  "https://*.up.railway.app",
 ];
 
 app.use(
