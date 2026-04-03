@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../services/api";
@@ -25,6 +26,7 @@ export default function Dashboard() {
 
   const handleLogout = () => {
     api.logout();
+    toast.success("Berhasil logout 👋");
     navigate("/login", { replace: true });
   };
 
@@ -62,13 +64,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
-// Tambah import di atas
-import { toast } from "react-hot-toast";
-
-// Ganti fungsi handleLogout jadi:
-const handleLogout = () => {
-  api.logout();
-  toast.success("Berhasil logout 👋");
-  navigate("/login", { replace: true });
-};
