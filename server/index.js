@@ -11,7 +11,7 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://my-auth-app.vercel.app", // ← ganti nanti pas frontend deploy
+  "https://backend-app-production-9c14.up.railway.app/", // ← ganti nanti pas frontend deploy
 ];
 
 app.use(
